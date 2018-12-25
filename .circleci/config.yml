@@ -1,14 +1,17 @@
 version: 2.1
-jobs:
-  plan:
+executors:
+  python:
     docker:
       - image: circleci/python:3.6
+  plan:
+#     docker:
+#       - image: circleci/python:3.6
+    executor:
+      name: python
     steps:
       - checkout
       - run: |
           python -V
-      - run: |
-          echo $TEST_KEY
 #   aws:
 #     docker:
 #       - image: mesosphere/aws-cli
