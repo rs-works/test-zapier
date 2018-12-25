@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          cat README.md
+          python -V
   aws:
     docker:
       - image: mesosphere/aws-cli
