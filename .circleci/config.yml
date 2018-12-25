@@ -7,15 +7,17 @@ jobs:
       - checkout
       - run: |
           python -V
-  aws:
-    docker:
-      - image: mesosphere/aws-cli
-    steps:
       - run: |
-          which aws
+          echo $TEST_KEY
+#   aws:
+#     docker:
+#       - image: mesosphere/aws-cli
+#     steps:
+#       - run: |
+#           which aws
 workflows:
   version: 2.1
   build:
     jobs:
       - plan
-      - aws
+#       - aws
