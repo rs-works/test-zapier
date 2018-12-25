@@ -8,8 +8,7 @@ commands:
     steps:
       - run: python -V
 jobs:
-#   plan:
-  hello:
+  plan:
     executor: python
     steps:
       - checkout
@@ -20,8 +19,8 @@ jobs:
 #     steps:
 #       - run: |
 #           which aws
-# workflows:
-#   build:
-#     jobs:
-#       - plan
-# #       - aws
+workflows:
+  build:
+    jobs:
+      - plan
+#       - aws
