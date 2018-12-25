@@ -8,7 +8,8 @@ commands:
     steps:
       - run: python -V
 jobs:
-  plan:
+#   plan:
+  build:
     executor: python
     steps:
       - checkout
