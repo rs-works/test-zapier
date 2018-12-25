@@ -7,8 +7,15 @@ jobs:
       - checkout
       - run: |
           cat README.md
+  aws:
+    docker:
+      - image: mesosphere/aws-cli
+    steps:
+      - run: |
+          which aws
 workflows:
   version: 2
-  approved_deploy:
+  build:
     jobs:
       - plan
+      - aws
