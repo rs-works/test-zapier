@@ -9,7 +9,7 @@ commands:
       - run: python -V
 jobs:
 #   plan:
-  build:
+  hello:
     executor: python
     steps:
       - checkout
