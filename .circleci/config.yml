@@ -10,22 +10,17 @@ commands:
 jobs:
   plan:
     executor: python
-#     docker:
-#       - image: circleci/python:3.6
     steps:
       - checkout
       - version_check
-#       - run: |
-#           python -V
 #   aws:
 #     docker:
 #       - image: mesosphere/aws-cli
 #     steps:
 #       - run: |
 #           which aws
-workflows:
-#   version: 2.1
-  build:
-    jobs:
-      - plan
-#       - aws
+# workflows:
+#   build:
+#     jobs:
+#       - plan
+# #       - aws
