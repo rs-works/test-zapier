@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  plan:
+    docker:
+      - image: circleci/python:3.6
+    steps:
+      - checkout
+      - run: |
+          cat README.md
+workflows:
+  version: 2
+  approved_deploy:
+    jobs:
+      - plan
